@@ -1,16 +1,174 @@
-# React + Vite
+# CRUD Frontend Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This is a React + Vite frontend application developed for performing CRUD operations on:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Users
+* Products
+* Orders
 
-## React Compiler
+The application integrates with a faculty-provided backend API.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* Vite
+* JavaScript
+* Axios
+* CSS
+
+---
+
+## Features
+
+### Users
+
+* View all users
+* Add new users
+
+### Products
+
+* View all products
+* Add new products
+
+### Orders
+
+* View all orders
+* Create new orders
+* Select users and products using dropdown menus
+
+---
+
+## API Integration
+
+This project uses faculty-provided REST APIs.
+
+### Base URL
+
+```bash
+http://10.1.152.30:5000/api
+```
+
+---
+
+## API Endpoints
+
+### Users
+
+* GET `/users`
+* POST `/users`
+
+### Products
+
+* GET `/products`
+* POST `/products`
+
+### Orders
+
+* GET `/orders`
+* POST `/orders`
+
+
+---
+
+## Installation
+
+Clone project and install dependencies:
+
+```bash
+npm install
+```
+
+Install required packages:
+
+```bash
+npm install axios react-router-dom
+```
+
+---
+
+## Run Application
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Application runs on:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+## API Configuration
+
+File: `src/api.js`
+
+```javascript
+import axios from "axios";
+
+const API = axios.create({
+  baseURL: "http://10.1.152.30:5000/api",
+});
+
+export default API;
+```
+
+---
+
+## Pages
+
+### Users Page
+
+Handles user management:
+
+* Fetch users
+* Add users
+
+### Products Page
+
+Handles product management:
+
+* Fetch products
+* Add products
+
+### Orders Page
+
+Handles order management:
+
+* Fetch orders
+* Add orders
+* Dropdown selection for users and products
+
+---
+
+## Styling
+
+The application uses custom CSS styling with:
+
+* Responsive design
+* Cards layout
+* Form styling
+* Navigation bar styling
+
+---
+
+## Future Enhancements
+
+* Update functionality
+* Delete functionality
+* Search and filter
+* Dashboard analytics
+* Authentication
+
+---
+
+## Author
+
+Developed by Pavan Prasad
